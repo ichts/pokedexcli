@@ -23,7 +23,7 @@ func startRepl(config *cfg) {
 		cleanText := strings.Fields(strings.ToLower(text))
 		command, exists := commands[cleanText[0]]
 		if exists {
-			if command.name == "explore" {
+			if command.name == "explore" || command.name == "catch" {
 				config.Flag = cleanText[1]
 			}
 			command.callback(config)
