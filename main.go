@@ -45,6 +45,16 @@ var commands = map[string]cliCommand{
 		description: "Catch a pokemon",
 		callback:    commandCatch,
 	},
+	"inspect": {
+		name:        "inspect",
+		description: "Inspect a pokemon",
+		callback:    commandInspect,
+	},
+	"pokedex": {
+		name:        "pokedex",
+		description: "List all the pokemons in your pokedex",
+		callback:    commandPokedex,
+	},
 }
 
 type nameAndDescription struct {
@@ -72,6 +82,26 @@ var namesAndDescriptions = []nameAndDescription{
 	{
 		name:        "map",
 		description: "Displays next 20 locations",
+	},
+	{
+		name:        "mapb",
+		description: "Displays previous 20 locations",
+	},
+	{
+		name:        "explore",
+		description: "List all the Pokemon located in a location area",
+	},
+	{
+		name:        "catch",
+		description: "Catch a pokemon",
+	},
+	{
+		name:        "insepct",
+		description: "Inspect a pokemon",
+	},
+	{
+		name:        "pokedex",
+		description: "List all the pokemons in your pokdex",
 	},
 }
 
